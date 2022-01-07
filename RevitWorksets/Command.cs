@@ -29,7 +29,7 @@ namespace RevitWorksets
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
             Debug.Listeners.Clear();
-            Debug.Listeners.Add(new RbsLogger.Logger("Worksets"));
+            //Debug.Listeners.Add(new RbsLogger.Logger("Worksets"));
             Document doc = commandData.Application.ActiveUIDocument.Document;
 
             if(!doc.IsWorkshared)
