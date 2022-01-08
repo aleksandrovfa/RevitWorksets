@@ -30,6 +30,7 @@ namespace RevitWorksets
         {
             Debug.Listeners.Clear();
             //Debug.Listeners.Add(new RbsLogger.Logger("Worksets"));
+            //Debug.Listeners.Add()
             Document doc = commandData.Application.ActiveUIDocument.Document;
 
             if(!doc.IsWorkshared)
