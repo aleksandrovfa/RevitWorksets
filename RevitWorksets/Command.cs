@@ -29,8 +29,8 @@ namespace RevitWorksets
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
             Debug.Listeners.Clear();
-            //Debug.Listeners.Add(new RbsLogger.Logger("Worksets"));
-            //Debug.Listeners.Add()
+            Debug.Listeners.Add(new RbsLogger.Logger("Worksets"));
+
             Document doc = commandData.Application.ActiveUIDocument.Document;
 
             if(!doc.IsWorkshared)
@@ -159,8 +159,29 @@ namespace RevitWorksets
                         }
                     }
                 }
-                
-                if(storage.worksetByParameter != null)
+
+                //if(storage.worksetByParameter != null)
+                //{
+                //    Debug.WriteLine("Start worksets by parameters");
+                //    string paramName = storage.worksetByParameter.ParameterName;
+                //    foreach (Element elem in allElems)
+                //    {
+                //        Parameter p = elem.LookupParameter(paramName);
+                //        if (p == null) continue;
+                //        if (!p.HasValue) continue;
+                //        if(p.StorageType != StorageType.String)
+                //        {
+                //            string errmsg = "Parameter is not string: " + paramName;
+                //            Debug.WriteLine(errmsg);
+                //            throw new Exception(errmsg);
+                //        }
+                //        string wsetParamValue = p.AsString();
+                //        Workset wsetByparamval = WorksetBy.GetOrCreateWorkset(doc, wsetParamValue);
+                //        WorksetBy.SetWorkset(elem, wsetByparamval);
+                //    }
+                //}
+
+                if (storage.worksetByParameter != null)
                 {
                     Debug.WriteLine("Start worksets by parameters");
                     string paramName = storage.worksetByParameter.ParameterName;
@@ -169,17 +190,24 @@ namespace RevitWorksets
                         Parameter p = elem.LookupParameter(paramName);
                         if (p == null) continue;
                         if (!p.HasValue) continue;
-                        if(p.StorageType != StorageType.String)
+                        if (p.Definition.ParameterType != ParameterType.YesNo)
                         {
-                            string errmsg = "Parameter is not string: " + paramName;
+                            string errmsg = "Parameter is not YesNo: " + paramName;
                             Debug.WriteLine(errmsg);
                             throw new Exception(errmsg);
                         }
-                        string wsetParamValue = p.AsString();
-                        Workset wsetByparamval = WorksetBy.GetOrCreateWorkset(doc, wsetParamValue);
-                        WorksetBy.SetWorkset(elem, wsetByparamval);
+                        // нужны только элементы с отмеченной галочкой.
+                        if (p.AsInteger() == 1)
+                        {
+                            string wsetParamValue = storage.worksetByParameter.WorksetName;
+                            Workset wsetByparamval = WorksetBy.GetOrCreateWorkset(doc, wsetParamValue);
+                            WorksetBy.SetWorkset(elem, wsetByparamval);
+                        }
                     }
                 }
+
+
+
 
 
                 if (storage.worksetByLink != null)
@@ -206,6 +234,7 @@ namespace RevitWorksets
                             Debug.WriteLine("It is nested link");
                             continue;
                         }
+
                         char separator = wsetbylink.separator[0];
                         string linkWorksetName1 = linkFileType.Name.Split(separator)[wsetbylink.partNumberAfterSeparator];
                         string linkWorksetName2 = linkWorksetName1

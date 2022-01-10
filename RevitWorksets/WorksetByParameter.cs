@@ -19,6 +19,8 @@ namespace RevitWorksets
     {
         public string ParameterName;
 
+        public string WorksetName;
+
         public WorksetByParameter()
         {
 
