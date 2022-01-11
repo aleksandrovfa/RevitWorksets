@@ -37,7 +37,7 @@ namespace RevitWorksets
             {
                 message = "Файл не является файлом совместной работы";
                 Debug.WriteLine("File os not workshared document");
-                return Result.Failed; ;
+                return Result.Failed;
             }
 
             //считываю список рабочих наборов

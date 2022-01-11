@@ -70,6 +70,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Worksets_СС.xml" />
     <Content Include="Worksets_ЭО.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

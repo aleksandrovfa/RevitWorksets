@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<InfosStorage>
+  <ConfigurationName>Test</ConfigurationName>
+  <worksetsByCategory>
+    
+    <WorksetByCategory>
+      <WorksetName>#_Общие уровни и сетки</WorksetName>
+      <revitCategories>
+        <BuiltInCategory>OST_Grids</BuiltInCategory>
+        <BuiltInCategory>OST_Levels</BuiltInCategory>
+      </revitCategories>
+    </WorksetByCategory>
+    
+    <WorksetByCategory>
+      <WorksetName>01_АОВ_Автоматизация</WorksetName>
+      <revitCategories>
+        <BuiltInCategory>OST</BuiltInCategory>
+      </revitCategories>
+    </WorksetByCategory>
+    
+    <WorksetByCategory>
+      <WorksetName>03_Оборудование силовое</WorksetName>
+      <revitCategories>
+        <BuiltInCategory>OST_ElectricalFixtures</BuiltInCategory>
+        <BuiltInCategory>OST_LightingDevices</BuiltInCategory>
+      </revitCategories>
+    </WorksetByCategory>
+    
+    <WorksetByCategory>
+      <WorksetName>04_Щиты шкафы</WorksetName>
+      <revitCategories>
+        <BuiltInCategory>OST_ElectricalEquipment</BuiltInCategory>
+      </revitCategories>
+    </WorksetByCategory>
+  </worksetsByCategory>
+  
+  <worksetsByFamily>
+    <WorksetByFamily>
+      <WorksetName>05_Молниезащита</WorksetName>
+      <FamilyNames>
+        <string>ETL_Обозначение_опуска_молниезащиты</string>
+      </FamilyNames>
+    </WorksetByFamily>
+  </worksetsByFamily>
+  <!--
+  <worksetByParameter>
+    <WorksetName>02_Освещение аварийное</WorksetName>
+    <ParameterName>Аварийный</ParameterName>
+  </worksetByParameter>
+  -->
+  <worksetByLink>
+    <separator>_</separator>
+    <partNumberAfterSeparator>2</partNumberAfterSeparator>
+    <ignoreFirstCharsAfterSeparation>0</ignoreFirstCharsAfterSeparation>
+    <ignoreLastCharsAfterSeparation>0</ignoreLastCharsAfterSeparation>
+    <prefixForLinkWorksets>#_Связи </prefixForLinkWorksets>
+  </worksetByLink>
+</InfosStorage>
