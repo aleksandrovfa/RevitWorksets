@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <InfosStorage>
   <ConfigurationName>Test</ConfigurationName>
+
   <worksetsByCategory>
-    
+
     <WorksetByCategory>
       <WorksetName>#_Общие уровни и сетки</WorksetName>
       <revitCategories>
@@ -10,49 +11,155 @@
         <BuiltInCategory>OST_Levels</BuiltInCategory>
       </revitCategories>
     </WorksetByCategory>
-    
+
     <WorksetByCategory>
-      <WorksetName>01_АОВ_Автоматизация</WorksetName>
+      <WorksetName>11_ТП_Трубные прокладки</WorksetName>
       <revitCategories>
-        <BuiltInCategory>OST</BuiltInCategory>
+        <BuiltInCategory>OST_Conduit</BuiltInCategory>
       </revitCategories>
     </WorksetByCategory>
-    
-    <WorksetByCategory>
-      <WorksetName>03_Оборудование силовое</WorksetName>
-      <revitCategories>
-        <BuiltInCategory>OST_ElectricalFixtures</BuiltInCategory>
-        <BuiltInCategory>OST_LightingDevices</BuiltInCategory>
-      </revitCategories>
-    </WorksetByCategory>
-    
-    <WorksetByCategory>
-      <WorksetName>04_Щиты шкафы</WorksetName>
-      <revitCategories>
-        <BuiltInCategory>OST_ElectricalEquipment</BuiltInCategory>
-      </revitCategories>
-    </WorksetByCategory>
+
   </worksetsByCategory>
+
+  <worksetsByFamily>
+
+    <WorksetByFamily>
+      <WorksetName>01_АОВ_Автоматизация</WorksetName>
+      <FamilyNames>
+        <string>ETL_ТочкаПодключения_ДатчикиАОВ</string>
+      </FamilyNames>
+    </WorksetByFamily>
+
+
+
+    <WorksetByFamily>
+      <WorksetName>02_ОС_Охранная сигнализация</WorksetName>
+      <FamilyNames>
+        <string>ETL_Извещатель</string>
+        <string>ETL_Извещатель</string>
+      </FamilyNames>
+    </WorksetByFamily>
+
   
   <worksetsByFamily>
     <WorksetByFamily>
-      <WorksetName>05_Молниезащита</WorksetName>
+      <WorksetName>03_ОТС_Охранно-тревожная сигнализация</WorksetName>
       <FamilyNames>
-        <string>ETL_Обозначение_опуска_молниезащиты</string>
+        <string>ETL_Извещатель</string>
+        <string>ETL_Извещатель</string>
       </FamilyNames>
     </WorksetByFamily>
   </worksetsByFamily>
+
+
+  <WorksetByFamily>
+    <WorksetName>04_РТ_Радиовещание и телевещание</WorksetName>
+    <FamilyNames>
+      <string>ETL_Этажный_громкоговоритель</string>
+    </FamilyNames>
+  </WorksetByFamily>
+
+
+
+  <WorksetByFamily>
+    <WorksetName>05_РТ_Радиовещание</WorksetName>
+    <FamilyNames>
+      <string>ETL_Радиорозетка</string>
+    </FamilyNames>
+  </WorksetByFamily>
+
+
+  <WorksetByFamily>
+    <WorksetName>06_СКС_Структурированные кабельные сети</WorksetName>
+    <FamilyNames>
+      <string>ETL_Шкаф_Телекоммуникационный</string>
+      <string>ETL_Розетка_Телефонная</string>
+      <string>ETL_Коробка_Распределительная</string>
+    </FamilyNames>
+  </WorksetByFamily>
+
+
+
+  <WorksetByFamily>
+    <WorksetName>07_СКТСО_Система оповещения ГО и ЧС</WorksetName>
+    <FamilyNames>
+      <string>ETL_Оповещатель</string>
+      <string>ETL_Контроллер</string>
+      <string>ETL_Громкоговоритель</string>
+    </FamilyNames>
+  </WorksetByFamily>
+
+
+
+  <WorksetByFamily>
+    <WorksetName>08_СКУД_Система контроля доступа</WorksetName>
+    <FamilyNames>
+      <string>ETL_Замок</string>
+      <string>ETL_Считыватель</string>
+      <string>ETL_Кнопка_Выход</string>
+      <string>ETL_Светофор</string>
+    </FamilyNames>
+  </WorksetByFamily>
+
+
+
+  <WorksetByFamily>
+    <WorksetName>09_СОТ_Система охранного телевидения</WorksetName>
+    <FamilyNames>
+      <string>ETL_Камера</string>
+    </FamilyNames>
+  </WorksetByFamily>
+
+
+  <WorksetByFamily>
+    <WorksetName>10_ТВ_Телевидение</WorksetName>
+    <FamilyNames>
+      <string>ETL_Монитор</string>
+    </FamilyNames>
+  </WorksetByFamily>
+    
+  <WorksetByFamily>
+    <WorksetName>11_ТП_Трубные прокладки</WorksetName>
+    <FamilyNames>
+      <string>ETL_Зона_обслуживания(Лотки)</string>
+      <string>ETL_Рамка</string>
+      <string>ETL_Лоток</string>
+      <string>ETL_Коробка_Протяжная</string>
+      <string>Труба</string>
+    </FamilyNames>
+  </WorksetByFamily>
+
+  </worksetsByFamily>
   <!--
   <worksetByParameter>
+  
     <WorksetName>02_Освещение аварийное</WorksetName>
     <ParameterName>Аварийный</ParameterName>
+    
   </worksetByParameter>
+
   -->
   <worksetByLink>
+
     <separator>_</separator>
     <partNumberAfterSeparator>2</partNumberAfterSeparator>
     <ignoreFirstCharsAfterSeparation>0</ignoreFirstCharsAfterSeparation>
     <ignoreLastCharsAfterSeparation>0</ignoreLastCharsAfterSeparation>
     <prefixForLinkWorksets>#_Связи </prefixForLinkWorksets>
+
   </worksetByLink>
 </InfosStorage>
+
+<!--
+]] 01_АОВ_Автоматизация ]]
+]]02_ОС_Охранная сигнализация
+]]03_ОТС_Охранно-тревожная сигнализация
+]] 04_РТ_Радиовещание и телевещание
+]] 05_РТ_Радиовещание
+]] 06_СКС_Структурированные кабельные сети
+]] 07_СКТСО_Система оповещения ГО и ЧС
+]] 08_СКУД_Система контроля доступа
+]] 09_СОТ_Система охранного телевидения 
+]] 10_ТВ_Телевидение
+]] 11_ТП_Трубные прокладки 
+  -->
