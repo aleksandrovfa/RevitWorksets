@@ -47,9 +47,8 @@
   <worksetsByType>
     
     <WorksetByType>
-      <WorksetName>Трубы</WorksetName>
+      <WorksetName>05_Молниезащита</WorksetName>
       <TypeNames>
-        <string>Труба поливинилхлоридная</string>
       </TypeNames>
     </WorksetByType>
     
