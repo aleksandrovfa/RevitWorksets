@@ -2,6 +2,7 @@
 <InfosStorage>
   <ConfigurationName>Test</ConfigurationName>
   <worksetsByCategory>
+    
     <WorksetByCategory>
       <WorksetName>#_Общие уровни и сетки</WorksetName>
       <revitCategories>
@@ -9,18 +10,21 @@
         <BuiltInCategory>OST_Levels</BuiltInCategory>
       </revitCategories>
     </WorksetByCategory>
+    
     <WorksetByCategory>
       <WorksetName>01_Освещение рабочее</WorksetName>
       <revitCategories>
         <BuiltInCategory>OST_LightingFixtures</BuiltInCategory>
       </revitCategories>
     </WorksetByCategory>
+    
     <WorksetByCategory>
       <WorksetName>03_Оборудование силовое</WorksetName>
       <revitCategories>
         <BuiltInCategory>OST_ElectricalFixtures</BuiltInCategory>
         <BuiltInCategory>OST_LightingDevices</BuiltInCategory>
       </revitCategories>
+      
     </WorksetByCategory>
     <WorksetByCategory>
       <WorksetName>04_Щиты шкафы</WorksetName>
@@ -28,19 +32,35 @@
         <BuiltInCategory>OST_ElectricalEquipment</BuiltInCategory>
       </revitCategories>
     </WorksetByCategory>
+    
   </worksetsByCategory>
   <worksetsByFamily>
+    
     <WorksetByFamily>
       <WorksetName>05_Молниезащита</WorksetName>
       <FamilyNames>
         <string>ETL_Обозначение_опуска_молниезащиты</string>
       </FamilyNames>
     </WorksetByFamily>
+
   </worksetsByFamily>
+  <worksetsByType>
+    
+    <WorksetByType>
+      <WorksetName>Трубы</WorksetName>
+      <TypeNames>
+        <string>Труба поливинилхлоридная</string>
+      </TypeNames>
+    </WorksetByType>
+    
+  </worksetsByType>
   <worksetByParameter>
+    
     <WorksetName>02_Освещение аварийное</WorksetName>
     <ParameterName>Аварийный</ParameterName>
+    
   </worksetByParameter>
+  
   <worksetByLink>
     <separator>_</separator>
     <partNumberAfterSeparator>2</partNumberAfterSeparator>
@@ -48,4 +68,5 @@
     <ignoreLastCharsAfterSeparation>0</ignoreLastCharsAfterSeparation>
     <prefixForLinkWorksets>#_Связи </prefixForLinkWorksets>
   </worksetByLink>
+  
 </InfosStorage>
